@@ -10,24 +10,25 @@ else
     echo "You are super user."
 fi
 
-dnf install mysql -y
+dnf update -y
 
 if [ $? -ne 0 ]
 then
-    echo "Installation of mysql...FAILURE"
+    echo "Installation of updates...FAILURE"
     exit 1
 else
-    echo "Installation of mysql...SUCCESS"
+    echo "Installation of updates...SUCCESS"
 fi
 
-dnf install git -y
+dnf install -y ansible-core
 
 if [ $? -ne 0 ]
 then
-    echo "Installation of git...FAILURE"
+    echo "Installation of ansible...FAILURE"
     exit 1
 else
-    echo "Installation of Git...SUCCESS"
+    echo "Installation of ansible...SUCCESS"
 fi
 
-echo "is script proceeding?"
+echo "version of ansible"
+ansible --version
