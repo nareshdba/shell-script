@@ -10,7 +10,7 @@ else
     echo "You are super user."
 fi
 
-dnf update -y
+yum update -y
 
 if [ $? -ne 0 ]
 then
@@ -20,7 +20,7 @@ else
     echo "Installation of updates...SUCCESS"
 fi
 
-dnf install -y ansible-core
+yum install -y ansible-core
 
 if [ $? -ne 0 ]
 then
