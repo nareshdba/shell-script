@@ -28,3 +28,9 @@ VALIDATE $? "Installing MySQL"
 
 yum install git -y &>>$LOGFILE
 VALIDATE $? "Installing Git"
+
+yum install epel-release -y &>>$LOGFILE
+VALIDATE $? "Installing epel for ansible"
+
+yum install ansible -y &>>$LOGFILE
+VALIDATE $? "Installating ansible"
