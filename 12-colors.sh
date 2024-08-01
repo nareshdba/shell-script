@@ -28,11 +28,11 @@ else
     echo "You are super user."
 fi
 
-dnf install mysql -y &>>$LOGFILE
+yum install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing MySQL"
 
-dnf install git -y &>>$LOGFILE
+yum install git -y &>>$LOGFILE
 VALIDATE $? "Installing Git"
 
-dnf install dockerr -y &>>$LOGFILE
+yum install dockerr -y &>>$LOGFILE
 VALIDATE $? "Installing Docker"
