@@ -27,6 +27,9 @@ else
     echo "You are super user."
 fi
 
+dnf update -y &>>$LOGFILE
+VALIDATE $? "Update the Server with latest rpm"
+
 dnf install mysql-server -y &>>$LOGFILE
 VALIDATE $? "Installing MySQL Server"
 
